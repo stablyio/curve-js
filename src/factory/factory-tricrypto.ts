@@ -1,10 +1,10 @@
 import { IDict, IPoolData, ICurve } from "../interfaces";
 import { curve } from "../curve.js";
-import ERC20ABI from "../constants/abis/ERC20.json" assert { type: 'json' };
-import tricryptoFactorySwapABI from "../constants/abis/factory-tricrypto/factory-tricrypto-pool.json" assert { type: 'json' };
-import tricryptoFactoryEthDisabledSwapABI from "../constants/abis/factory-tricrypto/factory-tricrypto-pool-eth-disabled.json" assert { type: 'json' };
-import factoryGaugeABI from "../constants/abis/gauge_factory.json" assert { type: 'json' };
-import gaugeChildABI from "../constants/abis/gauge_child.json" assert { type: 'json' };
+import ERC20ABI from "../constants/abis/ERC20.json";
+import tricryptoFactorySwapABI from "../constants/abis/factory-tricrypto/factory-tricrypto-pool.json";
+import tricryptoFactoryEthDisabledSwapABI from "../constants/abis/factory-tricrypto/factory-tricrypto-pool-eth-disabled.json";
+import factoryGaugeABI from "../constants/abis/gauge_factory.json";
+import gaugeChildABI from "../constants/abis/gauge_child.json";
 import { tricryptoDeployImplementations } from "../constants/tricryptoDeployImplementations.js";
 
 

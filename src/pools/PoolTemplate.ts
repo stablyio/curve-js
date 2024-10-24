@@ -32,7 +32,7 @@ import {
 } from '../utils.js';
 import {IDict, IReward, IProfit, IPoolType} from '../interfaces';
 import { curve } from "../curve.js";
-import ERC20Abi from '../constants/abis/ERC20.json' assert { type: 'json' };
+import ERC20Abi from '../constants/abis/ERC20.json';
 import {GaugePool, IGaugePool} from "./gaugePool.js";
 
 

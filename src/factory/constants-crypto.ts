@@ -38,6 +38,8 @@ export const lpTokenBasePoolIdDictBsc: IDict<string> = lowerCaseKeys({});
 
 export const lpTokenBasePoolIdDictFraxtal: IDict<string> = lowerCaseKeys({});
 
+export const lpTokenBasePoolIdDictFraxtalTestnet: IDict<string> = lowerCaseKeys({});
+
 export const lpTokenBasePoolIdDictXLayer: IDict<string> = lowerCaseKeys({});
 
 export const lpTokenBasePoolIdDictMantle: IDict<string> = lowerCaseKeys({});
@@ -84,6 +86,8 @@ export const basePoolIdZapDictBsc: IDict<{ address: string, ABI: any }> = {};
 
 export const basePoolIdZapDictFraxtal: IDict<{ address: string, ABI: any }> = {};
 
+export const basePoolIdZapDictFraxtalTestnet: IDict<{ address: string, ABI: any }> = {};
+
 export const basePoolIdZapDictXLayer: IDict<{ address: string, ABI: any }> = {};
 
 export const basePoolIdZapDictMantle: IDict<{ address: string, ABI: any }> = {};
@@ -128,6 +132,10 @@ export const CRYPTO_FACTORY_CONSTANTS: { [index: number]: { lpTokenBasePoolIdDic
     1284: {  // MOONBEAM
         lpTokenBasePoolIdDict: lpTokenBasePoolIdDictMoonbeam,
         basePoolIdZapDict: basePoolIdZapDictMoonbeam,
+    },
+    2522: {  // FRAXTAL TESTNET
+        lpTokenBasePoolIdDict: lpTokenBasePoolIdDictFraxtalTestnet,
+        basePoolIdZapDict: basePoolIdZapDictFraxtalTestnet,
     },
     2222: {  // KAVA
         lpTokenBasePoolIdDict: lpTokenBasePoolIdDictKava,

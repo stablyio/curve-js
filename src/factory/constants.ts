@@ -413,6 +413,11 @@ export const implementationABIDictFraxtal: IDict<any> = lowerCaseKeys({
     "0x5eeE3091f747E60a045a2E715a4c71e600e31F6E": MetaStableSwapNGABI,
 })
 
+export const implementationABIDictFraxtalTestnet: IDict<any> = lowerCaseKeys({
+    "0x206EEcCc1D705f69006cbd381861e6E2724C190C": PlainStableSwapNGABI,
+    "0x08eD34Cf89D56187aB87973aBFD414b2bCd25464": MetaStableSwapNGABI,
+})
+
 export const implementationABIDictXLayer: IDict<any> = lowerCaseKeys({
     "0x87FE17697D0f14A222e8bEf386a0860eCffDD617": PlainStableSwapNGABI,
     "0x1764ee18e8B3ccA4787249Ceb249356192594585": MetaStableSwapNGABI,
@@ -534,6 +539,8 @@ export const basePoolIdZapDictBsc: IDict<{ address: string, ABI: any }> = {}
 
 export const basePoolIdZapDictFraxtal: IDict<{ address: string, ABI: any }> = {}
 
+export const basePoolIdZapDictFraxtalTestnet: IDict<{ address: string, ABI: any }> = {}
+
 export const basePoolIdZapDictXLayer: IDict<{ address: string, ABI: any }> = {}
 
 export const basePoolIdZapDictMantle: IDict<{ address: string, ABI: any }> = {}
@@ -597,6 +604,11 @@ export const FACTORY_CONSTANTS: { [index: number]: { implementationABIDict: IDic
     2222: {  // KAVA
         implementationABIDict: implementationABIDictKava,
         basePoolIdZapDict: basePoolIdZapDictKava,
+        stableNgBasePoolZap: stableNgBasePoolZap,
+    },
+    2522: {  // FRAXTAL TESTNET
+        implementationABIDict: implementationABIDictFraxtalTestnet,
+        basePoolIdZapDict: basePoolIdZapDictFraxtalTestnet,
         stableNgBasePoolZap: stableNgBasePoolZap,
     },
     5000: { //MANTLE

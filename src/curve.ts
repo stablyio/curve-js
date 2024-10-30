@@ -68,6 +68,7 @@ import {
     POOLS_DATA_FRAXTAL,
     POOLS_DATA_XLAYER,
     POOLS_DATA_MANTLE,
+    POOLS_DATA_FRAXTAL_TESTNET,
 } from './constants/pools/index.js';
 import {
     ALIASES_ETHEREUM,
@@ -87,6 +88,7 @@ import {
     ALIASES_FRAXTAL,
     ALIASES_XLAYER,
     ALIASES_MANTLE,
+    ALIASES_FRAXTAL_TESTNET,
 } from "./constants/aliases.js";
 import { COINS_ETHEREUM, cTokensEthereum, yTokensEthereum, ycTokensEthereum, aTokensEthereum } from "./constants/coins/ethereum.js";
 import { COINS_OPTIMISM, cTokensOptimism, yTokensOptimism, ycTokensOptimism, aTokensOptimism } from "./constants/coins/optimism.js";
@@ -109,6 +111,7 @@ import { lowerCasePoolDataAddresses, extractDecimals, extractGauges } from "./co
 import { _getHiddenPools } from "./external-api.js";
 import { L2Networks } from "./constants/L2Networks.js";
 import { getTwocryptoFactoryPoolData } from "./factory/factory-twocrypto.js";
+import { aTokensFraxtalTestnet, COINS_FRAXTAL_TESTNET, cTokensFraxtalTestnet, ycTokensFraxtalTestnet, yTokensFraxtalTestnet } from "./constants/coins/fraxtal_testnet.js";
 
 export const memoizedContract = (): (address: string, abi: any, provider: BrowserProvider | JsonRpcProvider | Signer) => Contract => {
     const cache: Record<string, Contract> = {};
@@ -204,6 +207,12 @@ export const NATIVE_TOKENS: { [index: number]: { symbol: string, wrappedSymbol: 
         wrappedSymbol: 'WKAVA',
         address: "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
         wrappedAddress: '0xc86c7C0eFbd6A49B35E8714C5f59D99De09A225b'.toLowerCase(),
+    },
+    2522: {  // FRAXTAL TESTNET
+        symbol: 'frxETH',
+        wrappedSymbol: 'wfrxETH',
+        address: "0x7f195FDdf37D48aCD075db34B62E7e13118A1BC1",
+        wrappedAddress: '0xFC00000000000000000000000000000000000006'.toLowerCase(),
     },
     5000: {  // MANTLE
         symbol: 'MNT',
@@ -344,6 +353,16 @@ export const NETWORK_CONSTANTS: { [index: number]: any } = {
         yTokens: yTokensMoonbeam,
         ycTokens: ycTokensMoonbeam,
         aTokens: aTokensMoonbeam,
+    },
+    2522: {
+        NAME: 'fraxtal-testnet',
+        ALIASES: ALIASES_FRAXTAL_TESTNET,
+        POOLS_DATA: POOLS_DATA_FRAXTAL_TESTNET,
+        COINS: COINS_FRAXTAL_TESTNET,
+        cTokens: cTokensFraxtalTestnet,
+        yTokens: yTokensFraxtalTestnet,
+        ycTokens: ycTokensFraxtalTestnet,
+        aTokens: aTokensFraxtalTestnet,
     },
     2222: {
         NAME: 'kava',
@@ -711,7 +730,8 @@ class Curve implements ICurve {
 
         this.setContract(this.constants.ALIASES.factory, factoryABI);
 
-        if (this.chainId !== 1313161554 && this.chainId !== 252 && this.chainId !== 324 && this.chainId !== 196 && this.chainId !== 5000) {
+        if (this.chainId !== 1313161554 && this.chainId !== 252 && this.chainId !== 324 && this.chainId !== 196 && this.chainId !== 5000 
+            && this.chainId !== 2522) {
             const factoryContract = this.contracts[this.constants.ALIASES.factory].contract;
             this.constants.ALIASES.factory_admin = (await factoryContract.admin(this.constantOptions) as string).toLowerCase();
             this.setContract(this.constants.ALIASES.factory_admin, factoryAdminABI);
@@ -833,7 +853,7 @@ class Curve implements ICurve {
     }
 
     fetchFactoryPools = async (useApi = true): Promise<void> => {
-        if ([196, 252, 324, 5000, 1313161554].includes(this.chainId)) return;
+        if ([196, 252, 324, 2522, 5000, 1313161554].includes(this.chainId)) return;
 
         if (useApi) {
             this.constants.FACTORY_POOLS_DATA = lowerCasePoolDataAddresses(await getFactoryPoolsDataFromApi.call(this, "factory"));
@@ -936,7 +956,7 @@ class Curve implements ICurve {
     }
 
     fetchNewFactoryPools = async (): Promise<string[]> => {
-        if ([196,252,1313161554].includes(this.chainId)) return [];
+        if ([196,252,2522,1313161554].includes(this.chainId)) return [];
 
         const currentPoolIds = Object.keys(this.constants.FACTORY_POOLS_DATA);
         const lastPoolIdx = currentPoolIds.length === 0 ? -1 : Number(currentPoolIds[currentPoolIds.length - 1].split("-")[2]);
@@ -994,7 +1014,7 @@ class Curve implements ICurve {
     }
 
     fetchRecentlyDeployedFactoryPool = async (poolAddress: string): Promise<string> => {
-        if ([196,252,1313161554].includes(this.chainId)) return '';
+        if ([196,252,2522,1313161554].includes(this.chainId)) return '';
 
         const poolData = lowerCasePoolDataAddresses(await getFactoryPoolData.call(this, 0, poolAddress));
         this.constants.FACTORY_POOLS_DATA = { ...this.constants.FACTORY_POOLS_DATA, ...poolData };

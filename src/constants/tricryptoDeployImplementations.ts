@@ -54,6 +54,11 @@ export const tricryptoDeployImplementations = {
         amm_native_transfers_enabled: '0xFAbC421e3368D158d802684A217a83c083c94CeB'.toLowerCase(), //0
         implementationIdx: 1,
     },
+    2522: { // FRAXTAL TESTNET
+        amm_native_transfers_disabled: '0x1955A2c7bbaC4b901c6A89a5b7bC03Fb62907951'.toLowerCase(), //1
+        amm_native_transfers_enabled: '0x1955A2c7bbaC4b901c6A89a5b7bC03Fb62907951'.toLowerCase(), //0
+        implementationIdx: 1,
+    },
     5000: {  // MANTLE
         amm_native_transfers_disabled: '0x7Ca46A636b02D4aBC66883D7FF164bDE506DC66a'.toLowerCase(), //1
         amm_native_transfers_enabled: '0x046207cB759F527b6c10C2D61DBaca45513685CC'.toLowerCase(), //0

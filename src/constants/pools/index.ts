@@ -14,6 +14,7 @@ import { POOLS_DATA_ZKSYNC } from "./zksync.js";
 import { POOLS_DATA_BASE } from "./base.js";
 import { POOLS_DATA_BSC } from "./bsc.js";
 import { POOLS_DATA_FRAXTAL } from "./fraxtal.js";
+import { POOLS_DATA_FRAXTAL_TESTNET } from "./fraxtal_testnet.js";
 import { POOLS_DATA_XLAYER } from "./xlayer.js";
 import { POOLS_DATA_MANTLE } from "./mantle.js";
 
@@ -34,6 +35,7 @@ export {
     POOLS_DATA_BASE,
     POOLS_DATA_BSC,
     POOLS_DATA_FRAXTAL,
+    POOLS_DATA_FRAXTAL_TESTNET,
     POOLS_DATA_XLAYER,
     POOLS_DATA_MANTLE,
 };

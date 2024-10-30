@@ -111,7 +111,7 @@ import { lowerCasePoolDataAddresses, extractDecimals, extractGauges } from "./co
 import { _getHiddenPools } from "./external-api.js";
 import { L2Networks } from "./constants/L2Networks.js";
 import { getTwocryptoFactoryPoolData } from "./factory/factory-twocrypto.js";
-import { aTokensFraxtalTestnet, COINS_FRAXTAL_TESTNET, cTokensFraxtalTestnet, ycTokensFraxtalTestnet, yTokensFraxtalTestnet } from "./constants/coins/fraxtal_testnet.js";
+import { aTokensFraxtalTestnet, COINS_FRAXTAL_TESTNET, cTokensFraxtalTestnet, DECIMALS_FRAXTAL_TESTNET, ycTokensFraxtalTestnet, yTokensFraxtalTestnet } from "./constants/coins/fraxtal_testnet.js";
 
 export const memoizedContract = (): (address: string, abi: any, provider: BrowserProvider | JsonRpcProvider | Signer) => Contract => {
     const cache: Record<string, Contract> = {};
@@ -363,6 +363,7 @@ export const NETWORK_CONSTANTS: { [index: number]: any } = {
         yTokens: yTokensFraxtalTestnet,
         ycTokens: ycTokensFraxtalTestnet,
         aTokens: aTokensFraxtalTestnet,
+        decimals: DECIMALS_FRAXTAL_TESTNET,
     },
     2222: {
         NAME: 'kava',

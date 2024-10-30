@@ -20,7 +20,17 @@ export const COINS_FRAXTAL_TESTNET: IDict<string> = lowerCaseValues({
 });
 
 export const DECIMALS_FRAXTAL_TESTNET: IDict<number> = lowerCaseKeys({
-    "0x4D6E79013212F10A026A1FB0b926C9Fd0432b96c": 6,
+    "0x4d6e79013212f10a026a1fb0b926c9fd0432b96c": 6,
+    "0x7f195fddf37d48acd075db34b62e7e13118a1bc1": 18,
+    "0x2cab811d351b4ef492d8c197e09939f1c9f54330": 18,
+    "0xfc00000000000000000000000000000000000006": 18,
+    "0x05a09c8bf515d0035e1af22b24487928913475bd": 18,
+    "0x98182ec55be5091d653f9df016fb1070add7a16e": 18,
+    "0x0dbf64462fec588df32fc5c9941421f7d93e0fb3": 18,
+    "0x828a7248dad914435f452d73363491ab7ec4d8f4": 18,
+    "0x4cb47b0fd8f8eff846889d3bead1c33bc93c7fd6": 18,
+    "0x78c4fa90703c8d905b83416cda5b2f77a8c386c5": 18,
+    "0x99df29568c899d0854017de5d265aaf42cb123fa": 18
 });
 
 export const cTokensFraxtalTestnet = []; //.map((a) => a.toLowerCase());

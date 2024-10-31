@@ -25,6 +25,101 @@ export const _getPoolsFromApi = memoize(
 )
 
 export const _getAllPoolsFromApi = async (network: INetworkName): Promise<IExtendedPoolDataFromApi[]> => {
+    if (network === "fraxtal-testnet") {
+        return [{
+            poolData: [
+                {
+                    id: "0x1BBB5CAf76868698F00056f48f77ba13cfc5fE8D",
+                    address: "0x1BBB5CAf76868698F00056f48f77ba13cfc5fE8D",
+                    amplificationCoefficient: "20000000",
+                    name: "dTrinity_dUSD_FXS",
+                    symbol: "ddUSDFXS",
+                    assetTypeName: "CRYPTO",
+                    isMetaPool: false,
+                    gaugeRewards: [],
+                    usdTotal: 500000,
+                    gaugeCrvApy: [null, null],
+                    totalSupply: 218703338603451438341158,
+                    implementationAddress: "0x1BBB5CAf76868698F00056f48f77ba13cfc5fE8D",
+                    implementation: "twocrypto-optimized",
+                    coins: [
+                        {
+                            address: "0x4D6E79013212F10A026A1FB0b926C9Fd0432b96c",
+                            decimals: "6",
+                            symbol: "dUSD",
+                            usdPrice: 1
+                            },
+                            {
+                                address: "0x98182ec55Be5091d653F9Df016fb1070add7a16E",
+                                decimals: "18",
+                                symbol: "FXS",
+                                usdPrice: 4.42437174
+                            }
+                        ]
+                    },
+                    {
+                        id: "0x93f785642837e082ff95bB69E64e5B6967857c74",
+                        address: "0x93f785642837e082ff95bB69E64e5B6967857c74", 
+                        totalSupply: 499999999999999995805446,
+                        amplificationCoefficient: "20000000",
+                        assetTypeName: "CRYPTO",
+                        isMetaPool: false,
+                        gaugeRewards: [],
+                        usdTotal: 500000,
+                        gaugeCrvApy: [null, null],    
+                        name: "dTrinity_dUSD_FRAX",
+                        symbol: "ddUSDFRAX",
+                        implementationAddress: "0x93f785642837e082ff95bB69E64e5B6967857c74",
+                        implementation: "twocrypto-optimized",
+                        coins: [
+                            {
+                                address: "0x4D6E79013212F10A026A1FB0b926C9Fd0432b96c",
+                                decimals: "6", 
+                                symbol: "dUSD",
+                                usdPrice: 1
+                            },
+                            {
+                                address: "0x2CAb811d351B4eF492D8C197E09939F1C9f54330",
+                                decimals: "18",
+                                symbol: "FRAX", 
+                                usdPrice: 1
+                            }
+                        ]
+                    },
+                    {
+                        id: "0x6a7173EA306983f3721Cc9A3c6EA7f0a3a2f3c13",
+                        address: "0x6a7173EA306983f3721Cc9A3c6EA7f0a3a2f3c13",
+                        amplificationCoefficient: "20000000", 
+                        name: "dTrinity_FRAX_sFRAX",
+                        symbol: "dFRAXsFRAX",
+                        assetTypeName: "CRYPTO",
+                        isMetaPool: false,
+                        gaugeRewards: [],
+                        usdTotal: 500000,
+                        gaugeCrvApy: [null, null],
+                        totalSupply: 524993787505290563442702,
+                        implementationAddress: "0x6a7173EA306983f3721Cc9A3c6EA7f0a3a2f3c13",
+                        implementation: "twocrypto-optimized",
+                        coins: [
+                            {
+                                address: "0x2CAb811d351B4eF492D8C197E09939F1C9f54330",
+                                decimals: "18",
+                                symbol: "FRAX",
+                                usdPrice: 1
+                            },
+                            {
+                                address: "0x0Dbf64462FEC588df32FC5C9941421F7d93e0Fb3",
+                                decimals: "18",
+                                symbol: "sFRAX",
+                                usdPrice: 1.1
+                            }
+                        ]
+                    }
+                ],
+                tvlAll: 3.000000023211136,
+                tvl: 3.000000023211136
+        }]
+    }
     return await Promise.all([
         _getPoolsFromApi(network, "main"),
         _getPoolsFromApi(network, "crypto"),

@@ -13,6 +13,7 @@ export const POOLS_DATA_FRAXTAL_TESTNET: IDict<IPoolData> = lowerCasePoolDataAdd
         token_address: '0x1BBB5CAf76868698F00056f48f77ba13cfc5fE8D', // pool address
         gauge_address: '0x0000000000000000000000000000000000000000', // this pool has no gauge
         is_plain: true,
+        is_crypto: true,
         underlying_coins: ['dUSD', 'FXS'],
         wrapped_coins: ['dUSD', 'FXS'],
         underlying_coin_addresses: [
@@ -38,6 +39,7 @@ export const POOLS_DATA_FRAXTAL_TESTNET: IDict<IPoolData> = lowerCasePoolDataAdd
         token_address: '0x93f785642837e082ff95bB69E64e5B6967857c74', // pool address
         gauge_address: '0x0000000000000000000000000000000000000000', // this pool has no gauge
         is_plain: true,
+        is_crypto: true,
         underlying_coins: ['dUSD', 'FRAX'],
         wrapped_coins: ['dUSD', 'FRAX'],
         underlying_coin_addresses: [
@@ -63,6 +65,7 @@ export const POOLS_DATA_FRAXTAL_TESTNET: IDict<IPoolData> = lowerCasePoolDataAdd
         token_address: '0x6a7173EA306983f3721Cc9A3c6EA7f0a3a2f3c13', // pool address
         gauge_address: '0x0000000000000000000000000000000000000000', // this pool has no gauge
         is_plain: true,
+        is_crypto: true,
         underlying_coins: ['FRAX', 'sFRAX'],
         wrapped_coins: ['FRAX', 'sFRAX'],
         underlying_coin_addresses: [

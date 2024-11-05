@@ -510,8 +510,8 @@ class Curve implements ICurve {
     }
 
     async init(
-        providerType: 'JsonRpc' | 'Web3' | 'Infura' | 'Alchemy',
-        providerSettings: { url?: string, privateKey?: string, batchMaxCount? : number } | { externalProvider: ethers.Eip1193Provider } | { network?: Networkish, apiKey?: string },
+        providerType: 'JsonRpc' | 'Web3' | 'Infura' | 'Alchemy' | 'StaticJsonRpc',
+        providerSettings: { url?: string, privateKey?: string, batchMaxCount? : number } | { externalProvider: ethers.Eip1193Provider } | { network?: Networkish, apiKey?: string } | { staticProvider: ethers.JsonRpcProvider },
         options: { gasPrice?: number, maxFeePerGas?: number, maxPriorityFeePerGas?: number, chainId?: number } = {} // gasPrice in Gwei
     ): Promise<void> {
         // @ts-ignore
@@ -561,8 +561,6 @@ class Curve implements ICurve {
                 };
             }
 
-
-
             if (providerSettings.url) {
                 this.provider = new ethers.JsonRpcProvider(providerSettings.url, undefined, jsonRpcApiProviderOptions);
             } else {
@@ -593,6 +591,10 @@ class Curve implements ICurve {
             providerSettings = providerSettings as { network?: Networkish, apiKey?: string };
             this.provider = new ethers.AlchemyProvider(providerSettings.network, providerSettings.apiKey);
             this.signer = null;
+        } else if (providerType.toLowerCase() === 'StaticJsonRpc'.toLowerCase()) {
+            providerSettings = providerSettings as { staticProvider: ethers.JsonRpcProvider };
+            this.provider = providerSettings.staticProvider;
+            this.signer = await this.provider.getSigner();
         } else {
             throw Error('Wrong providerType');
         }

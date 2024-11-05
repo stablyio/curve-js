@@ -595,6 +595,7 @@ class Curve implements ICurve {
             providerSettings = providerSettings as { staticProvider: ethers.JsonRpcProvider };
             this.provider = providerSettings.staticProvider;
             this.signer = await this.provider.getSigner();
+            console.log("SIGNER ADDRESS", await this.signer.getAddress());
         } else {
             throw Error('Wrong providerType');
         }

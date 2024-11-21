@@ -161,6 +161,7 @@ const curve = {
     setCustomFeeData,
     getPoolList: _curve.getPoolList,
     getMainPoolList: _curve.getMainPoolList,
+    getPoolIdBySwapAddress: _curve.getPoolIdBySwapAddress,
     getUserPoolListByLiquidity,
     getUserPoolListByClaimable,
     getUserPoolList,

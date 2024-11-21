@@ -1104,6 +1104,12 @@ class Curve implements ICurve {
         ...this.constants.LLAMMAS_DATA,
     });
 
+    getPoolIdBySwapAddress = (swapAddress: string): string => {
+        const poolsData = this.getPoolsData();
+        const poolData = Object.entries(poolsData).find(([poolId, poolData]) => poolData.swap_address.toLowerCase() === swapAddress.toLowerCase());
+        return poolData ? poolData[0] : '';
+    }
+
     getGaugeImplementation = (factoryType: IFactoryPoolType): string => this.constants.FACTORY_GAUGE_IMPLEMENTATIONS[factoryType] || this.constants.ZERO_ADDRESS;
 
     setCustomFeeData(customFeeData: { gasPrice?: number, maxFeePerGas?: number, maxPriorityFeePerGas?: number }): void {

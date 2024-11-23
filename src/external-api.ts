@@ -29,7 +29,7 @@ export const _getAllPoolsFromApi = async (network: INetworkName): Promise<IExten
         return [{
             poolData: [
                 {
-                    id: "0x1BBB5CAf76868698F00056f48f77ba13cfc5fE8D",
+                    id: "dTrinity_dUSD_FXS",
                     address: "0x1BBB5CAf76868698F00056f48f77ba13cfc5fE8D",
                     amplificationCoefficient: "20000000",
                     name: "dTrinity_dUSD_FXS",
@@ -58,7 +58,7 @@ export const _getAllPoolsFromApi = async (network: INetworkName): Promise<IExten
                         ]
                     },
                     {
-                        id: "0x93f785642837e082ff95bB69E64e5B6967857c74",
+                        id: "dTrinity_dUSD_FRAX",
                         address: "0x93f785642837e082ff95bB69E64e5B6967857c74", 
                         totalSupply: 499999999999999995805446,
                         amplificationCoefficient: "20000000",
@@ -87,7 +87,7 @@ export const _getAllPoolsFromApi = async (network: INetworkName): Promise<IExten
                         ]
                     },
                     {
-                        id: "0x6a7173EA306983f3721Cc9A3c6EA7f0a3a2f3c13",
+                        id: "dTrinity_FRAX_sFRAX",
                         address: "0x6a7173EA306983f3721Cc9A3c6EA7f0a3a2f3c13",
                         amplificationCoefficient: "20000000", 
                         name: "dTrinity_FRAX_sFRAX",
@@ -114,7 +114,39 @@ export const _getAllPoolsFromApi = async (network: INetworkName): Promise<IExten
                                 usdPrice: 1.1
                             }
                         ]
-                    }
+                    },
+                    {
+                        "id": "dUSD-FRAX",
+                        "address": "0x1FCa361032eE8123cbeB82Ae2dfA169e4d56fcd0",
+                        "amplificationCoefficient": "200",
+                        "name": "dUSD-FRAX",
+                        "symbol": "dUSDFRAX",
+                        "totalSupply": 2000019999999999983221107,
+                        "assetTypeName": "unknown",
+                        "isMetaPool": false,
+                        "gaugeRewards": [],
+                        "usdTotal": 1,
+                        "gaugeCrvApy": [
+                          null,
+                          null
+                        ],
+                        "implementationAddress": "0x1FCa361032eE8123cbeB82Ae2dfA169e4d56fcd0",
+                        "implementation": "plainstableng",
+                        "coins": [
+                          {
+                            "address": "0x4D6E79013212F10A026A1FB0b926C9Fd0432b96c",
+                            "decimals": "6",
+                            "symbol": "dUSD",
+                            "usdPrice": "1"
+                          },
+                          {
+                            "address": "0x2CAb811d351B4eF492D8C197E09939F1C9f54330",
+                            "decimals": "18",
+                            "symbol": "FRAX",
+                            "usdPrice": "1"
+                          }
+                        ]
+                      }
                 ],
                 tvlAll: 3.000000023211136,
                 tvl: 3.000000023211136

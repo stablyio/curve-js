@@ -58,35 +58,6 @@ export const _getAllPoolsFromApi = async (network: INetworkName): Promise<IExten
                         ]
                     },
                     {
-                        id: "dTrinity_dUSD_FRAX",
-                        address: "0x93f785642837e082ff95bB69E64e5B6967857c74", 
-                        totalSupply: 499999999999999995805446,
-                        amplificationCoefficient: "20000000",
-                        assetTypeName: "CRYPTO",
-                        isMetaPool: false,
-                        gaugeRewards: [],
-                        usdTotal: 500000,
-                        gaugeCrvApy: [null, null],    
-                        name: "dTrinity_dUSD_FRAX",
-                        symbol: "ddUSDFRAX",
-                        implementationAddress: "0x93f785642837e082ff95bB69E64e5B6967857c74",
-                        implementation: "twocrypto-optimized",
-                        coins: [
-                            {
-                                address: "0x4D6E79013212F10A026A1FB0b926C9Fd0432b96c",
-                                decimals: "6", 
-                                symbol: "dUSD",
-                                usdPrice: 1
-                            },
-                            {
-                                address: "0x2CAb811d351B4eF492D8C197E09939F1C9f54330",
-                                decimals: "18",
-                                symbol: "FRAX", 
-                                usdPrice: 1
-                            }
-                        ]
-                    },
-                    {
                         id: "dTrinity_FRAX_sFRAX",
                         address: "0x6a7173EA306983f3721Cc9A3c6EA7f0a3a2f3c13",
                         amplificationCoefficient: "20000000", 
@@ -125,7 +96,7 @@ export const _getAllPoolsFromApi = async (network: INetworkName): Promise<IExten
                         "assetTypeName": "unknown",
                         "isMetaPool": false,
                         "gaugeRewards": [],
-                        "usdTotal": 500000,
+                        "usdTotal": 2000000,
                         "gaugeCrvApy": [
                           null,
                           null

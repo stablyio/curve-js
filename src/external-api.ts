@@ -125,7 +125,7 @@ export const _getAllPoolsFromApi = async (network: INetworkName): Promise<IExten
                         "assetTypeName": "unknown",
                         "isMetaPool": false,
                         "gaugeRewards": [],
-                        "usdTotal": 1,
+                        "usdTotal": 500000,
                         "gaugeCrvApy": [
                           null,
                           null

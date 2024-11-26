@@ -1,6 +1,6 @@
 {
   "name": "@curvefi/api",
-  "version": "2.63.10.3",
+  "version": "2.63.10.4",
   "description": "JavaScript library for curve.fi",
   "main": "lib/index.js",
   "author": "Macket",
@@ -13,6 +13,7 @@
   "bugs": {
     "url": "https://github.com/curvefi/curve-js/issues"
   },
+  "type": "module",
   "scripts": {
     "build": "rm -rf lib && tsc -p tsconfig.build.json",
     "lint": "eslint src --ext .ts"

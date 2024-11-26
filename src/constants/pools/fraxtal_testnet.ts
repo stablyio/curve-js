@@ -1,7 +1,7 @@
 import { lowerCasePoolDataAddresses } from "../utils.js";
 import { IPoolData, IDict } from "../../interfaces.js";
-import twopoolSwapABI from '../abis/2pool/swap.json' assert { type: 'json' };
-import gaugeChildABI from '../abis/gauge_child.json' assert { type: 'json' };
+import twopoolSwapABI from '../abis/2pool/swap.json' ;
+import gaugeChildABI from '../abis/gauge_child.json' ;
 
 export const POOLS_DATA_FRAXTAL_TESTNET: IDict<IPoolData> = lowerCasePoolDataAddresses({
     'dTrinity_dUSD_FXS': {

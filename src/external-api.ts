@@ -87,11 +87,11 @@ export const _getAllPoolsFromApi = async (network: INetworkName): Promise<IExten
                         ]
                     },
                     {
-                        "id": "dUSD-FRAX",
+                        "id": "dTrinity_dUSD_FRAX",
                         "address": "0x1FCa361032eE8123cbeB82Ae2dfA169e4d56fcd0",
                         "amplificationCoefficient": "200",
-                        "name": "dUSD-FRAX",
-                        "symbol": "dUSDFRAX",
+                        "name": "dTrinity_dUSD_FRAX",
+                        "symbol": "ddUSDFRAX",
                         "totalSupply": 2000019999999999983221107,
                         "assetTypeName": "unknown",
                         "isMetaPool": false,

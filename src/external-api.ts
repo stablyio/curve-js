@@ -47,80 +47,80 @@ export const _getAllPoolsFromApi = async (network: INetworkName): Promise<IExten
                             address: "0x4D6E79013212F10A026A1FB0b926C9Fd0432b96c",
                             decimals: "6",
                             symbol: "dUSD",
-                            usdPrice: 1
-                            },
-                            {
-                                address: "0x98182ec55Be5091d653F9Df016fb1070add7a16E",
-                                decimals: "18",
-                                symbol: "FXS",
-                                usdPrice: 4.42437174
-                            }
-                        ]
-                    },
-                    {
-                        id: "dTrinity_FRAX_sFRAX",
-                        address: "0x6a7173EA306983f3721Cc9A3c6EA7f0a3a2f3c13",
-                        amplificationCoefficient: "20000000", 
-                        name: "dTrinity_FRAX_sFRAX",
-                        symbol: "dFRAXsFRAX",
-                        assetTypeName: "CRYPTO",
-                        isMetaPool: false,
-                        gaugeRewards: [],
-                        usdTotal: 500000,
-                        gaugeCrvApy: [null, null],
-                        totalSupply: 524993787505290563442702,
-                        implementationAddress: "0x6a7173EA306983f3721Cc9A3c6EA7f0a3a2f3c13",
-                        implementation: "twocrypto-optimized",
-                        coins: [
-                            {
-                                address: "0x2CAb811d351B4eF492D8C197E09939F1C9f54330",
-                                decimals: "18",
-                                symbol: "FRAX",
-                                usdPrice: 1
-                            },
-                            {
-                                address: "0x0Dbf64462FEC588df32FC5C9941421F7d93e0Fb3",
-                                decimals: "18",
-                                symbol: "sFRAX",
-                                usdPrice: 1.1
-                            }
-                        ]
-                    },
-                    {
-                        "id": "dTrinity_dUSD_FRAX",
-                        "address": "0x1FCa361032eE8123cbeB82Ae2dfA169e4d56fcd0",
-                        "amplificationCoefficient": "200",
-                        "name": "dTrinity_dUSD_FRAX",
-                        "symbol": "ddUSDFRAX",
-                        "totalSupply": 2000019999999999983221107,
-                        "assetTypeName": "unknown",
-                        "isMetaPool": false,
-                        "gaugeRewards": [],
-                        "usdTotal": 2000000,
-                        "gaugeCrvApy": [
-                          null,
-                          null
-                        ],
-                        "implementationAddress": "0x1FCa361032eE8123cbeB82Ae2dfA169e4d56fcd0",
-                        "implementation": "plainstableng",
-                        "coins": [
-                          {
+                            usdPrice: 1,
+                        },
+                        {
+                            address: "0x98182ec55Be5091d653F9Df016fb1070add7a16E",
+                            decimals: "18",
+                            symbol: "FXS",
+                            usdPrice: 4.42437174,
+                        },
+                    ],
+                },
+                {
+                    id: "dTrinity_FRAX_sFRAX",
+                    address: "0x6a7173EA306983f3721Cc9A3c6EA7f0a3a2f3c13",
+                    amplificationCoefficient: "20000000", 
+                    name: "dTrinity_FRAX_sFRAX",
+                    symbol: "dFRAXsFRAX",
+                    assetTypeName: "CRYPTO",
+                    isMetaPool: false,
+                    gaugeRewards: [],
+                    usdTotal: 500000,
+                    gaugeCrvApy: [null, null],
+                    totalSupply: 524993787505290563442702,
+                    implementationAddress: "0x6a7173EA306983f3721Cc9A3c6EA7f0a3a2f3c13",
+                    implementation: "twocrypto-optimized",
+                    coins: [
+                        {
+                            address: "0x2CAb811d351B4eF492D8C197E09939F1C9f54330",
+                            decimals: "18",
+                            symbol: "FRAX",
+                            usdPrice: 1,
+                        },
+                        {
+                            address: "0x0Dbf64462FEC588df32FC5C9941421F7d93e0Fb3",
+                            decimals: "18",
+                            symbol: "sFRAX",
+                            usdPrice: 1.1,
+                        },
+                    ],
+                },
+                {
+                    "id": "dTrinity_dUSD_FRAX",
+                    "address": "0x1FCa361032eE8123cbeB82Ae2dfA169e4d56fcd0",
+                    "amplificationCoefficient": "200",
+                    "name": "dTrinity_dUSD_FRAX",
+                    "symbol": "ddUSDFRAX",
+                    "totalSupply": 2000019999999999983221107,
+                    "assetTypeName": "unknown",
+                    "isMetaPool": false,
+                    "gaugeRewards": [],
+                    "usdTotal": 2000000,
+                    "gaugeCrvApy": [
+                        null,
+                        null,
+                    ],
+                    "implementationAddress": "0x1FCa361032eE8123cbeB82Ae2dfA169e4d56fcd0",
+                    "implementation": "plainstableng",
+                    "coins": [
+                        {
                             "address": "0x4D6E79013212F10A026A1FB0b926C9Fd0432b96c",
                             "decimals": "6",
                             "symbol": "dUSD",
-                            "usdPrice": "1"
-                          },
-                          {
+                            "usdPrice": "1",
+                        },
+                        {
                             "address": "0x2CAb811d351B4eF492D8C197E09939F1C9f54330",
                             "decimals": "18",
                             "symbol": "FRAX",
-                            "usdPrice": "1"
-                          }
-                        ]
-                      }
-                ],
-                tvlAll: 3.000000023211136,
-                tvl: 3.000000023211136
+                            "usdPrice": "1",
+                        },
+                    ],
+                },
+            ],
+            tvlAll: 3.000000023211136,
+            tvl: 3.000000023211136,
         }]
     }
     return await Promise.all([

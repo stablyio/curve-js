@@ -87,22 +87,22 @@ export const _getAllPoolsFromApi = async (network: INetworkName): Promise<IExten
                         ]
                     },
                     {
-                        "id": "dUSD-FRAX",
-                        "address": "0x1FCa361032eE8123cbeB82Ae2dfA169e4d56fcd0",
-                        "amplificationCoefficient": "200",
-                        "name": "dUSD-FRAX",
-                        "symbol": "dUSDFRAX",
-                        "totalSupply": 2000019999999999983221107,
-                        "assetTypeName": "unknown",
+                        "id": "dTrinity_dUSD_FRAX",
+                        "address": "0x93f785642837e082ff95bB69E64e5B6967857c74",
+                        "amplificationCoefficient": "20000000",
+                        "name": "dTrinity_dUSD_FRAX",
+                        "symbol": "ddUSDFRAX",
+                        "totalSupply": 499999999999999995805446,
+                        "assetTypeName": "CRYPTO",
                         "isMetaPool": false,
                         "gaugeRewards": [],
-                        "usdTotal": 2000000,
+                        "usdTotal": 500000,
                         "gaugeCrvApy": [
                           null,
                           null
                         ],
-                        "implementationAddress": "0x1FCa361032eE8123cbeB82Ae2dfA169e4d56fcd0",
-                        "implementation": "plainstableng",
+                        "implementationAddress": "0x93f785642837e082ff95bB69E64e5B6967857c74",
+                        "implementation": "twocrypto-optimized",
                         "coins": [
                           {
                             "address": "0x4D6E79013212F10A026A1FB0b926C9Fd0432b96c",

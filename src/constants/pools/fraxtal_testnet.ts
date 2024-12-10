@@ -56,15 +56,16 @@ export const POOLS_DATA_FRAXTAL_TESTNET: IDict<IPoolData> = lowerCasePoolDataAdd
         gauge_abi: gaugeChildABI,
     },
 
-   'dUSD-FRAX': {
-        name: "dUSD-FRAX",
-        full_name: "dUSD-FRAX",
-        symbol: "dUSDFRAX",
-        reference_asset: 'USD',
-        swap_address: '0x1FCa361032eE8123cbeB82Ae2dfA169e4d56fcd0', // pool address
-        token_address: '0x1FCa361032eE8123cbeB82Ae2dfA169e4d56fcd0', // pool address
+    'dTrinity_dUSD_FRAX': {
+        name: "dTrinity_dUSD_FRAX",
+        full_name: "dTrinity_dUSD_FRAX",
+        symbol: "ddUSDFRAX",
+        reference_asset: 'CRYPTO',
+        swap_address: '0x93f785642837e082ff95bB69E64e5B6967857c74', // pool address
+        token_address: '0x93f785642837e082ff95bB69E64e5B6967857c74', // pool address
         gauge_address: '0x0000000000000000000000000000000000000000', // this pool has no gauge
         is_plain: true,
+        is_crypto: true,
         underlying_coins: ['dUSD', 'FRAX'],
         wrapped_coins: ['dUSD', 'FRAX'],
         underlying_coin_addresses: [
@@ -79,5 +80,5 @@ export const POOLS_DATA_FRAXTAL_TESTNET: IDict<IPoolData> = lowerCasePoolDataAdd
         wrapped_decimals: [6, 18],
         swap_abi: twopoolSwapABI,
         gauge_abi: gaugeChildABI,
-    }, 
+    },
 });
